@@ -1,0 +1,81 @@
+.coin-mn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* max-width: 1500px; */
+    border: 1px solid lightgray;
+    /* padding: 10px; */
+}
+.coin-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.crypto-head-con th{
+    text-align: center;
+    height: 40px;
+    font-size: 0.9rem;
+}
+.crypto-head-con th, .crypto-table td{
+    width: 150px;
+    text-align: center;
+}
+.crypto-table{
+    height: 50px;
+}
+.coin-table tr{
+    border-bottom: 1px solid lightgray;
+}
+.ine .name{
+   position: relative;
+   top: -20px;
+   right: -15px;
+}
+.c-image{
+    position: relative;
+    left: -10px;
+    top: 5px;
+}
+@media screen and (max-width:380px){
+    .coin-table td{
+       font-size: 14px;
+    }
+    .c-image{
+        width: 25px;
+        height: 25px;
+    }
+    .ine{
+        position: relative;
+        top: 9px;
+    }
+    .c-image{
+        position: relative;
+        left: -5px;
+        top: 3px;
+    }
+    .name{
+        right: 10px;
+    }
+}
+@media screen and (min-width:700px) {
+    .name-th{
+        position: relative;
+        left: -35px;
+    }
+    .ine{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .c-image{
+        position: relative;
+        left: 0;
+        top: 0;
+    }
+    .ine .name{
+        position: relative;
+        right: 0;
+        top: 0;
+    }
+}

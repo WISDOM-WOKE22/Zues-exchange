@@ -1,0 +1,12 @@
+.deposite-crypto{
+    width: 100%;
+    max-width: 500px;
+}
+.withdrawal-form .amount-box{
+    height: 35px;
+    width: 100%;
+    max-width: 440px;
+}
+.withdrawal-form .amount-box:hover{
+    border-color:lightgray ;
+}

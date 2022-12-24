@@ -1,0 +1,19 @@
+.mobile-sidebar-con{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 58px;
+    height: 90vh;
+    background-color: rgba(240, 238, 238,.5);
+    z-index: 2000;
+}
+.mobile-sidebar{
+    border-right: 1px solid lightgray;
+    min-height: 100vh;
+    position: fixed;
+    background-color: #fff;
+    z-index: 2000;
+    left: 0;
+    top: 60px;
+}
