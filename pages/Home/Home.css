@@ -1,0 +1,65 @@
+/* .Home-container{
+    display: grid;
+    grid-template-columns:1fr;
+}
+@media screen and (min-width:800px) {
+     .Home .Home-container{
+        display: flex;
+        grid-template-columns: 1fr;
+     }
+} */
+.transaction-balance{
+    padding: 15px;
+}
+.bl-txt{
+    font-size: 1.3rem;
+    color: gray;
+}
+.balance-amount{
+    font-size: 1.3rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+@media screen and (max-width:600px) {
+    .Home hr{
+        display: none;
+    }
+}
+.hd{
+    padding: 15px;
+}
+.coin-info{
+    overflow: auto;
+}
+.coin-body{
+    padding:0 ;
+    text-align: center;
+}
+.home-coin{
+    padding:  0 10px;
+    height: 50px;
+}
+.coin-info th{
+    /* width: 100%; */
+    width: 150px;
+}
+.coin_name{
+    display: flex;
+    margin-top: 5px;
+}
+.c-name{
+    display: flex;
+    flex-direction: column;
+    margin-left:15px ;
+    text-align: left;
+}
+.l-name{
+    color: gray;
+}
+.Trending{
+    padding: 20px;
+}
+@media screen and (max-width:500px){
+    .Trending{
+        padding: 13px;
+    }
+}

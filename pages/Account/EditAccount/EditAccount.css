@@ -1,0 +1,87 @@
+.Edit-account-wrapper{
+    padding: 20px;
+}
+.Edit-account-container{
+    margin-bottom: 80px;
+}
+@media screen and (max-width:500px) {
+    .Edit-account-wrapper{
+        padding: 15px;
+    }
+}
+@media screen and (max-width:400px) {
+    .Edit-account-wrapper{
+        padding: 10px;
+    }
+}
+.Edit-label{
+    display: flex;
+    flex-direction: column;
+}
+.Edit-label input{
+    width: 200%;
+    max-width: 400px;
+    height: 25px;
+    border: 1px solid gray;
+    text-indent: 5px;
+    outline: none;
+}
+.Edit-label input:hover{
+    border: 1px solid #0052FF;
+}
+.edit-btn2{
+    color:#fff;
+    background-color: #0052FF;
+    border: none;
+    padding: 5px 10px; 
+    position: relative;
+    top: 10px;
+}
+.edit-block{
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width:600px){
+    .Edit-label input{
+        width: 300px;
+    }
+    /* .edit-block{
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: left;
+    } */
+}
+@media screen and (max-width:500px){
+    .Edit-label input{
+        width: 250px;
+    }
+}
+@media screen and (max-width:440px){
+    .Edit-label input{
+        width: 200px;
+    }
+    .edit-btn2{
+        position: relative;
+        top: 8px;
+        font-size: 12px;
+        height: 30px;
+    }
+}
+@media screen and (max-width:360px){
+    .Edit-label input{
+        width: 120%;
+    }
+    .edit-block{
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: flex-start;
+    }
+}
+@media screen and (max-width:250px) {
+    .Edit-label input{
+        width: 100%;
+    }
+}

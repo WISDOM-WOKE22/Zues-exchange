@@ -1,0 +1,28 @@
+.withdrawal-main{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+.Withdrawal-page{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   width:100%;
+   /* max-width: 1200px; */
+}
+.withdraw-option{
+    display: flex;
+    justify-content: center;
+}
+.withdrawal-page-container .dpt-choice{
+    margin-top: 20px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width:100%;
+   max-width: 1200px;
+}
+.wallet-con{
+    height: 35px;
+}

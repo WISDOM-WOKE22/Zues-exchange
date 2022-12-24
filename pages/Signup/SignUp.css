@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita&display=swap');
+.l-con{
+    margin-top: 10px;
+}
+.sp{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+@media screen and (min-width:1200px) {
+    .sp{
+        width:100%;
+    }
+}
+.sp-body{
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 99%;
+}
+.sp-form{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.auth-form{
+    padding: 20px;
+    position: relative;
+    bottom: 20px;
+    right: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 370px;
+}
+.l-h2{
+    margin-bottom: 20px;
+}
+.input-con{
+    margin: 10px 0;
+    text-align: left;
+    font-weight: Sansita;
+}
+.input-con span{
+   position: relative;
+   margin-bottom: 5px;
+   left: 7px;
+
+}
+.auth-form input{
+    width: 90%;
+    max-width: 370px;
+    height: 35px;
+    border-radius: 20px;
+    border: 1px solid lightgray;
+    text-indent: 10px;
+    outline: none;
+}
+.auth-form input:hover{
+    border: 1px solid #005FF0;
+}
+.inpt-select{
+    text-align: left;
+}
+.css-1s2u09g-control{
+    outline: none;
+    height: 40px;
+    width: 90%;
+    position: relative;
+    left: 20px;
+    border-radius: 20px;
+}
+.auth-form button{
+    margin-top: 30px;
+    width: 100%;
+    max-width: 120px;
+    height: 30px;
+    margin-bottom: 30px;
+    color: #fff;
+    background-color: #005FF0;
+    border: 1px solid #fff;
+    outline: none;
+    border-radius: 20px;
+}
+.input-con .error{
+    display: flex;
+    justify-content: left;
+    margin-left: 3px;
+    align-items: center;
+
+}
+.err{
+    position: relative;
+    left: 21px;
+    top: 2px;
+}
+@media screen and (max-width:850px){
+    .sp-body{
+        display: flex;
+        flex-direction: column-reverse;
+        /* justify-content: center; */
+    }
+    .sp-image{
+        display: none;
+    }
+    .auth-form{
+        box-shadow: 0 0 10px lightgray;
+        border-top:4px solid #005FF0;
+        position: relative;
+        /* top: -70px; */
+    }
+    .sign-up-form{
+        position:relative;
+        top: 140px;
+    }
+}
+@media screen and (max-width:450px){
+    .auth-form{
+        box-shadow: none;
+        /* margin: 50px auto; */
+        border: none;
+        padding: 6px;
+    }
+    .sign-up-form{
+        top: 100px;
+    }
+}
+@media screen and (max-width:400px){
+    .auth-form{
+        box-shadow: none;
+        /* margin: 50px auto; */
+        /* padding: 10px; */
+    }
+    .auth-form input{
+        width: 100%;
+    }
+}

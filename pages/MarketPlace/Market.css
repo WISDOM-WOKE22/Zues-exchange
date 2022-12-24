@@ -1,0 +1,116 @@
+.market-wrapper{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 70px;
+}
+.market-wrapper h2{
+    color: #0052FF;
+}
+.market-search-container{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1300px;
+}
+.market-search{
+    display:flex ;
+    flex-direction: column;
+    width: 100%;
+    max-width:1000px ;
+    /* justify-content: center; */
+    align-items: center;
+}
+.market-input{
+    border: 1px solid gray;
+    padding: 5px;
+    height: 30px;
+    width: 600px;
+    color: gray;
+    outline: none;
+    transition: all .2s ease-in-out;
+    border-radius: 6px;
+    margin-top: 13px;
+}
+.market-table{
+    width: 100%;
+    max-width: 1000px;
+    display:flex;
+    justify-content: center;
+    margin-top: 20px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+}
+.market-table thead{
+    color: rgb(71, 70, 70);
+}
+.market-table td, .market-table th{
+    width: 200px;
+    height: 30px;
+    text-align: center;
+}
+.market-input:hover{
+    border-color:#0052FF ;
+    transition: all .2s ease-in-out;
+}
+.market .coin-mn{
+    width: 100%;
+    max-width: 1000px;
+}
+@media screen and (max-width:500px){
+    .market-wrapper{
+        padding: 10px;
+    }
+}
+@media screen and (max-width:750px) {
+    .market-input{
+        width: 400px;
+    }
+    .market-v{
+        display: none;
+    }
+}
+@media screen and (max-width:420px) {
+    .market-input{
+        width: 300px;
+        height: 25px;
+        padding: 2px;
+        text-indent:5px;
+    }
+
+}
+@media screen and (max-width:360px) {
+    .market-cap{
+        display: none;
+    }
+}
+@media screen and (max-width:360px) {
+    .market-input{
+        width: 250px;
+    }
+}
+.market .coin-mn{
+    margin-top: 30px;
+}
+@media screen and (max-width:450px) {
+    .market .ine{
+       position: relative;
+       top: 5px;
+    }
+    .market .c-image{
+        position: relative;
+        left:0;
+    }
+}
+@media screen and (max-width:400px){
+    .market .name{
+        font-size: 12px;
+        position: relative;
+        top: 20px;
+    }
+    .market .c-image{
+       position: relative;
+       left: -4px;
+    }
+}

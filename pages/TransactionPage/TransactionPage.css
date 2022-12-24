@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita&display=swap');
+.transaction-page{
+    display: flex;
+    flex-direction: column;
+    font-family: Sansita;
+}
+.transaction-page-container{
+    padding: 20px;
+    height: 90vh;
+}
+.transaction-itm{
+    margin: 15px;
+}
+@media screen and (max-width:500px) {
+    .transaction-page-container{
+        padding: 10px;
+        margin-bottom: 30px;
+    }
+}
+@media screen and (max-width:1000px){
+    .transaction-ui{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .transaction-itm{
+    width: 100%;
+    margin: 20px 0;
+}
+}
+.transaction-box-container{
+    margin-top: 20px;
+}
+.transaction-boxs{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+}
+.transaction-box{
+    padding: 20px 10px;
+    border-radius: 1rem;
+    box-shadow: 0 0 9px lightgray;
+    text-align: center;
+    margin:10px;
+}
+@media screen and (max-width:500px) {
+    .transaction-boxs{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}

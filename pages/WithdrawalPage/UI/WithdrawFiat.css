@@ -1,0 +1,115 @@
+.w-crypto-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 96%;
+}
+.w-crypto{
+    padding: 20px;
+    width: 93%;
+    /* align-items: center; */
+    /* justify-content: center; */
+} 
+.bank-container{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 500px;
+    margin-top: 15px;
+    /* position: relative;
+    left: 10px; */
+}
+.bank-list{
+    display: flex;
+    flex-direction: column;
+}
+.bank-item{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    position: relative;
+    left: -30px;
+    max-width: 500px;
+    padding: 5px;
+}
+.bank-item:hover{
+    background-color: rgb(233, 232, 232);
+}
+.withdrawal-form-container .inline2{
+    display: flex;
+}
+.withdrawal-form{
+    padding:0 20px;
+    width: 96%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: -20px;
+    /* align-items: center; */
+}
+.withdrawal-form, .withdrawal-form label{
+    display: flex;
+    flex-direction: column;
+}
+.withdrawal-form label{
+    margin-bottom: 20px;
+}
+.withdrawal-form label span{
+    margin-bottom: 5px;
+}
+.withdrawal-form input{
+    height: 27px;
+    outline: none;
+    width: 320px;
+    max-width: 400px;
+    border: 1px solid lightgray;
+    text-align: 6px;
+}
+.withdrawal-form label .inline2, .max-btn{
+    display: flex;
+    align-items: center;
+}
+.max-btn{
+    background-color: #0052FF;
+    color: #fff;
+    height: 31px;
+    width: 50px;
+    justify-content: center;
+    cursor: pointer;
+}
+.withdrawal-form input:hover{
+    border-color: #0052FF;
+}
+@media screen and (min-width:500px){
+    .w-crypto{
+        padding: 0;
+        position: relative;
+        left: 20px;
+    }
+    .w-crypto-container{
+        /* width: 500px; */
+    }
+}
+@media screen and (max-width:500px){
+    .withdrawal-form button{
+        position: relative;
+        top: -20px;
+        left: -15px;
+    }
+    .withdrawal-form{
+        padding: 10px;
+        position: relative;
+        left: -10px;
+    }
+}
+@media screen and (max-width:300px) {
+    .bank-item{
+        width: 260px;
+    }
+}
+@media screen and (min-width:700px) {
+    .w-crypto-container input{
+        width: 700px;
+    }
+}

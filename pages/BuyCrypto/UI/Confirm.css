@@ -1,0 +1,40 @@
+.confirm-container{
+    position: absolute;
+    background-color: rgb(228, 227, 227,0.5);
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 60px;
+}
+.confirm-wrapper{
+    background-color: #fff;
+    margin: 100px auto;
+    width: 100%;
+    max-width: 300px;
+    padding: 20px;
+    height: 200px;
+}
+.confirm-wrapper h3{
+    margin-bottom: 20px;
+    display:flex ;
+    justify-content: space-between;
+}
+.confirm-wrapper .remove{
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+.confirm-wrapper .remove:hover{
+    color: red;
+    transition: all 0.2s ease-in-out;
+}
+.confirm-wrapper button{
+    position: relative;
+    top: 90px;
+    width: 100%;
+    height: 30px;
+    border: none;
+    outline: none;
+    color: #fff;
+    margin-top: 20px;
+}

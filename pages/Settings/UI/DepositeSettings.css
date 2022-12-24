@@ -1,0 +1,16 @@
+.addcard-container .card-container{
+    margin: 10px auto;
+}
+.add-option{
+    padding: 10px;
+}
+.addcard-container button{
+    width: 100%;
+    max-width: 120px;
+    height: 30px;
+    padding: 5px;
+    position: relative;
+    left: 0;
+    font-size: 15px;
+    border-radius: 0;
+}

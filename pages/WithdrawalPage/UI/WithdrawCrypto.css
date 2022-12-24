@@ -1,0 +1,36 @@
+/* .withdraw-crypto-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.withdrawal-box{
+    width: 96%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.bank-container{
+    display: flex;
+    justify-content: center;
+    width: 300px;
+} */
+.inline{
+    /* width: 100%; */
+    display: flex;
+    /* flex-direction: column; */
+}
+.inline input{
+    width: 100%;
+    min-width: 300px;
+}
+.withdrawal-btn{
+    width: 100%;
+    height: 30px;
+}
+@media screen and (min-width:700px) {
+    .inline input{
+        width: 680px;
+    }
+}

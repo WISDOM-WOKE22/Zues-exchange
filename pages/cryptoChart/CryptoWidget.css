@@ -1,0 +1,44 @@
+ @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+.coin-container{
+  color: #353535;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 95%;
+}
+h1 {
+  font-weight: 900;
+  color: #00d395;
+  font-size: 50px;
+}
+.crypto-widget{
+  /* overflow: scroll; */
+  /* overflow-x: scroll; */
+  padding: 15px;
+}
+.chart-head{
+  width: 100%;
+}
+@media screen and (max-width:600px){
+  .coin-marketcap, .coin-volume{
+    display: none;
+  }
+}
+@media screen and (max-width:550px){
+  .coin-main-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.crypto-img {
+   height: 30px;
+  width: 30px;
+  margin-right: 10px;
+}
+.upt-green{
+  color: green;
+}
+.upt-red{
+  color: red;
+}

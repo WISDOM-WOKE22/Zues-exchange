@@ -1,0 +1,55 @@
+.settings-con{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+}
+.settings-opt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0;
+    width: 100%;
+    max-width: 1000px;
+}
+.settings-wrapper{
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    padding-bottom: 30px;
+    width: 100%;
+    height: fit-content;
+    max-width: 1000px;
+}
+.opt-con{
+    margin-top: 5px;
+    display: flex;
+} 
+.opt-item{
+    cursor: pointer;
+    text-align: center;
+    margin: 0 5px;
+}
+.opt-item:hover{
+    color: #0053FF;
+}
+@media screen and (max-width:500px) {
+    .settings-con{
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 25px;
+    }
+    .opt-item{
+        font-size: 14px;
+    }
+}
+hr{
+    border-color: lightgray;
+    border: 1px solid lightgray;
+}
+.hd-passwrd{
+    font-size: 1.2rem;
+}
+.sm-passwrd-con{
+    margin-top: 20px;
+}

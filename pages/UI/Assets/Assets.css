@@ -1,0 +1,38 @@
+.assets-con{
+    /* border: 1px solid lightgray; */
+    box-shadow: 0 0 10px lightgray;
+    border-radius: 6px;
+    /* background-color: #292828; */
+}
+/* .assets-txt{
+    font-size: 1.25rem;
+    height: 40px;
+    position: re;
+} */
+.assets-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5px 0;
+}
+.asset-image{
+    width:30px;
+    height: 30px;
+    margin-right: 5px;
+}
+.cn-dlt{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-right: 10px;
+}
+.my-assets{
+   margin-left: 10px;
+}
+.sym{
+    margin-left: 5px;
+}
+.assets-item{
+    height: 40px;
+}

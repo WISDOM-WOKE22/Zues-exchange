@@ -1,0 +1,42 @@
+.transactions{
+    padding-bottom:20px ;
+}
+.trh, .assets-txt{
+    height: 35px;
+    vertical-align: middle;
+    font-size: 1.25rem;
+    position: relative;
+    top: 10px;
+    padding-left: 15px;
+    color: rgb(66, 66, 66);
+    font-weight: 600;
+}
+.sl{
+    color: red;
+}
+.by{
+    color: green;
+}
+.table{
+    width: 100%;
+}
+thead .tr{
+    height: 40px;
+}
+.td{
+  text-align: center;
+}
+tbody .tr{
+    box-shadow: 0 0 6px lightgray;
+    height: 40px;
+}
+.n-tr{
+    text-align: center;
+    margin-top: 20px;
+    color: gray;
+}
+@media screen and (max-width:500px){
+    tbody td{
+        font-size: 14px;
+    }
+}

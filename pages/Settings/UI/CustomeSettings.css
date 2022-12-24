@@ -1,0 +1,13 @@
+.custome-container{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+.custome-container h4{
+    text-align: center;
+}
+.tplt-color{
+    position: relative;
+    left: 20px;
+}

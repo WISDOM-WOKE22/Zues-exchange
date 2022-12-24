@@ -1,0 +1,124 @@
+.stt-form{
+    padding: 30px 20px 20px 20px;
+    box-shadow: 0 0 10px lightgray;
+    max-width: 500px;
+    margin-top: 20px;
+
+}
+.stt-form label{
+    text-align: left;
+}
+.ui-setting label span{
+    color: rgb(92, 91, 91);
+}
+.settings-inpt, .stt-inpt{
+    height: 30px;
+    width: 100%;
+    max-width: 470px;
+    border: 1px solid lightgray;
+    padding-left:7px ;
+    display: flex;
+    align-items: center;
+}
+.stt{
+    margin-bottom: 10px;
+}
+.stt-inpt{
+    outline: none;
+}
+.stt-inpt:hover{
+    border-color:#0052FF ;
+}
+@media screen and (max-width:600px) {
+    .stt-form{
+        padding: 30px 10px 30px 10px;
+    }
+    .settings-inpt, .stt-inpt{
+        width: 97%;
+    }
+}
+.Template-color-stt{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Template-color-stt span{
+    position: relative;
+    left: -20px;
+}
+.tplt-color{
+    width: 200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 20px;
+}
+.tplt-box{
+    width: 32px;
+    height:32px;
+    border: 1px solid lightgray;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+.tplt-box1{
+    background-color: #0052FF;
+}
+.tplt-box2{
+    background-color: #2DBD96;
+}
+.tplt-box3{
+    background-color: #FCD535;
+}
+.tplt-box4{
+    background-color: #f3112f;
+}
+.tplt-box5{
+    background-color: #40196B;
+}
+.tplt-box6{
+    background-color: #fc04a9;
+}
+.tplt-box7{
+    background-color: #1ca549;
+}
+.tplt-box8{
+    background-color: rebeccapurple;
+}
+.tplt-box9{
+    background-color: #ff004c;
+}
+.theme{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.theme-btn{
+    width: 35px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid lightgray;
+    outline: none;
+    border-radius: 7px;
+    margin-right: 10px;
+}
+.theme-btn-main{
+    height: 10px;
+}
+.theme-btn-main{
+    content: '';
+    position: relative;
+    top: 1px;
+    left: -9px;
+    height: 10px;
+    width: 10px;
+    border-radius: 10px;
+    -webkit-appearance: none;
+    transition:all 0.3s ease-in-out ;
+}
+.theme-btn-main:checked{
+    left: 10px;
+}

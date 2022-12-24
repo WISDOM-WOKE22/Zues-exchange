@@ -1,0 +1,30 @@
+.Trending-container{
+    padding: 20px;
+}
+.trending-coin{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+}
+.trending-coin-name{
+    display: flex;
+}
+.trending-coin .trending-coin-image{
+    border-radius: 50%;
+}
+@media screen and (max-width:500px) {
+    .Trending-container{
+        padding: 10px;
+    }
+    .trending-coin{
+        font-size: 14px;
+    }
+}
+.trending-price{
+    color: green;
+}
+.tp-c{
+    margin-left: 2px;
+    font-size: 14px;
+    color: gray;
+}

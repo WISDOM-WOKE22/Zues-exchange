@@ -1,0 +1,68 @@
+.withdrawal-box{
+    margin-top: 20px;
+    padding: 20px;
+}
+.hd-stt-wd{
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+.withdrawal-box label{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 13px;
+}
+.withdrawal-box input{
+    height: 35px;
+    margin-top: 5px;
+    border: 1px solid lightgray;
+    outline: none;     
+    text-indent: 6px;
+}
+.withdrawal-box input:hover{
+    border: 1px solid #0052FF;
+}
+.crypto-select{
+    margin-top: 6px;
+}
+.wallet-address{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 45px;
+    padding: 0 8px;
+    border: 1px solid lightgray;
+    width: 96%;
+    margin-top: 5px;
+}
+.Bank-item{
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    left: -40px;
+    color: rgb(51, 50, 50);
+}
+.bank-icon:hover{
+   color: red;
+   cursor: pointer;
+}
+@media screen and (min-width:1000px) {
+    .withdrawal-form{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .form-inpt2, .wallet-address{
+        margin-left: 10px;
+    }
+}
+@media screen and (max-width:530px) {
+    .withdrawal-box{
+        padding: 10px;
+    }
+    .Bank-item{
+        padding: 5px;
+        width: 105%;
+    }
+}

@@ -1,0 +1,28 @@
+.spot-con{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.spot-dt{
+    margin-top: 30px;
+}
+.spot-txt{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+.spot-bg{
+    margin-bottom: 20px;
+}
+.spot-txt .spot-txt1{
+    color: gray;
+    font-size: 15px;
+}
+.spot-txt2{
+    font-size: 19px;
+}
+.spot-chart{
+    text-align: center;
+    position: relative;
+    right: 90px;
+}

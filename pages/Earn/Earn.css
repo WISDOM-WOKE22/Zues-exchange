@@ -1,0 +1,34 @@
+.earn{
+    margin-top: 60px;
+    padding-top: 40px;
+    /* width: 100%; */
+    padding-bottom: 70px;
+}
+.earn-con{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.earn-txt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+.earn-txt h2{
+    margin-bottom: 10px;
+    color: #0052FF;
+}
+.earn-txt p{
+    color: gray;
+    font-size: 14px;
+    text-align: center;
+}
+.pkg-comp{
+    display: flex;
+    justify-content: center;
+}
