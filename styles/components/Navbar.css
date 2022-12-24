@@ -1,0 +1,89 @@
+.Navbar{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    height: 65px;
+    /* border-bottom: 1px solid lightgray; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    z-index: 10000;
+    /* border-bottom: 2px solid lightgray; */
+    box-shadow: 0 0 10px lightgray;
+}
+.Navbar nav{
+    color: #0052FF;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+    padding-left: 20px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    background-color: #fff;
+
+}
+.Navbar nav menu{
+    display: flex;
+    flex-direction: row;
+}
+.logo{
+    display: flex;
+    cursor: pointer;
+    color: #0052FF;
+}
+.logo span{
+    font-size: 14px;
+    font-weight: 600;
+}
+.logo_sm{
+    width: 18px;
+    height: 30px;
+    border:3px solid  #0052FF;
+    margin-right: 5px;
+}
+.Navbar .login{
+    color:  #379CF4;
+}
+nav .menu_list {
+    display: flex;
+}
+.auth{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* nav .auth button{
+    height: 30px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    background-color: #0052FF;
+} */
+/* nav .auth button .link{
+    padding: 10px 20px;
+    color: #fff;
+} */
+.menu_bar{
+    display: none;
+}
+.mobile_auth{
+    display: flex;
+    justify-content: center;
+}
+.mobile_auth .btn1{
+    color: #fff;
+}
+.sign_up{
+    color: #fff;
+    position: relative;
+    /* top: -10px; */
+    font-size: 15px;
+    background-color: #0052FF;
+    padding: 5px 13px;
+    border-radius: 6px;
+}

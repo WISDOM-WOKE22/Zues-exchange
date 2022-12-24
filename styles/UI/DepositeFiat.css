@@ -1,0 +1,113 @@
+.dp-crypto{
+    margin-bottom: 70px;
+}
+.dp-form{
+    width: 400px;
+    text-align: left;
+    margin-top: 50px;
+}
+.dp-form h2{
+    font-size: 1.4rem;
+    text-align: left;
+    margin-bottom: 25px;
+}
+.dp-form select{
+    width: 200px;
+}
+.dp-form label span{
+    color: gray;
+}
+.select{
+    margin-bottom: 20px;
+    /* height: 40px; */
+}
+.dp-form input{
+    background-color: #0052FF;
+    cursor: pointer;      
+}
+.tf-ch{
+    width: 100%;
+}
+.tf-ch .ch{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    padding: 15px 7px;
+}
+.ch:hover{
+    box-shadow: 0 0 10px lightgray;
+    background-color: #fff;
+}
+.dp-form button{
+   width: 100%;
+   margin-top: 20px;
+   height: 45px;
+   font-size: 17px;
+   font-weight: 600;
+   border: 1px solid #0052FF;
+   background-color: #0052FF;
+   color: #fff;
+}
+.user-card{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   position: relative;
+   left: -40px;
+   height: 40px;
+}
+/* .user-card input{
+    width: 10px;
+    height: 10px;
+} */
+@media screen and (max-width:420px) {
+    .dp-form{
+        width: 370px;
+    }
+    .dp-form h2{
+        font-size: 1.2rem;
+    }
+}
+@media screen and (max-width:385px) {
+    .dp-form{
+        width: 340px;
+    }
+}
+@media screen and (max-width:350px) {
+    .dp-form{
+        width: 320px;
+    }
+}
+@media screen and (max-width:330px) {
+    .dp-form{
+        width: 300px;
+    }
+}
+@media screen and (max-width:310px) {
+    .dp-form{
+        width: 280px;
+    }
+}
+@media screen and (max-width:290px) {
+    .dp-form{
+        width: 260px;
+    }
+}
+@media screen and (max-width:270px) {
+    .dp-form{
+        width: 240px;
+    }
+}
+.form2{
+    display: flex;
+    flex-direction: column;
+}
+.form2 input{
+    background-color: #fff;
+    outline: none;
+    height: 33px;
+    border: 1px solid lightgray;
+    width: 100%;
+    margin-bottom: 60px;
+    text-indent: 5px;
+}

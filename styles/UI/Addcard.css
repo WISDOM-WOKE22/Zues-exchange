@@ -1,0 +1,96 @@
+.card{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #00000008;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.card p{
+    color: gray;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.card-container{
+    margin: 100px auto;
+    width: 100%;
+    max-width: 400px;
+    text-align: left;
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+.card-container h2{
+    text-align: left;
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+}
+.cvv, .expiry-date{
+    width: 100%;
+    max-width: 150px;
+}
+.card-container label{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.card-container label span{
+    color: gray;
+    margin-bottom: 3px;
+}
+.card-container input{
+    height: 35px;
+    border: 1px solid lightgray;
+    outline: none;
+    text-indent: 5px;
+}
+.card-container input:hover{
+    border: 1px solid #0052FF;
+}
+.card-nm{
+    display: flex;
+    justify-content: space-between;
+}
+.card-container button{
+    height: 40px;
+    border: 1px solid #0052FF;
+    border-radius: 20px;
+    background-color: #0052FF;
+    height: 45px;
+    color: #fff;
+    font-size: 18px;
+    margin-top: 20px;
+}
+@media screen and (max-width:500px) {
+    .card{
+        padding: 10px;
+    }
+    .card-container{
+        width: 90%;
+    }
+}
+@media screen and (max-width:400px){
+    .card-container input{
+        height: 30px;
+    }
+}
+.remove{
+    cursor: pointer;
+}
+.bl{
+    color: #0052FF;
+}
+.terms{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+}

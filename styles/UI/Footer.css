@@ -1,0 +1,21 @@
+.ft-box{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    margin-top: 20px;
+}
+.ft-list{
+    margin: 0 30px;
+    color: gray;
+}
+.lt-hd{
+    font-size: 1.1rem;
+}
+.lt-list{
+    font-size: 15px;
+}
+.lt-list li{
+    cursor: pointer;
+}
+.lt-list li:hover{
+    text-decoration: underline;
+}

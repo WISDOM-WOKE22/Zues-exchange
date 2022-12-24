@@ -1,0 +1,15 @@
+.App{
+  font-family: Arial;
+}
+h2{
+  margin: 0;
+  padding: 0;
+}
+.copy-btn{
+  background-color: #0052FF;
+  color: #fff;
+  width: 100px;
+  height: 30px;
+  outline: none;
+  border: none;
+}

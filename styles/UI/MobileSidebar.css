@@ -1,0 +1,59 @@
+.mobile-sidebar{
+    background-color: #0054FD;
+    position: fixed;
+    right: 0;
+    top: 62px;
+    min-height: 85vh;
+    width: 100%;
+    max-width: 120px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+}
+.m-sd-con{
+    max-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.m-sd-con li{
+    cursor: pointer;
+}
+.m-sd-con li .link{
+    padding: 10px 15px;
+    color: #fff;
+    width: 100%;
+    border-radius: 10px;
+}
+.m-sd-con li .link:hover{
+    background-color:  rgb(151, 197, 240,0.5);
+    border: 1px solid #0052FF;
+}
+.m-sd-con li .active{
+    color: #0052FF;
+}
+.user-dt, .user-img{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.user-img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+}
+.user-dt span{
+    margin-top: 5px;
+}
+@media screen and (max-width:350px) {
+    .m-sd-con{
+        max-height: 45vh;
+    }
+    .m-sd-con li .link{
+        padding: 7px 15px;
+    }
+}

@@ -1,0 +1,41 @@
+.mobile_menu{
+    min-height: 100vh;
+    position: fixed;
+    top: 66px;
+    right: 0;
+    text-align: right;
+    background-color:  #fff;
+    padding: 15px;
+    min-width:180px;
+    z-index: 1000;
+    border-left: 1px solid lightgray;
+}
+.mobile_con{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    justify-content: center;
+}
+.menu_list li, .mobile_auth li{
+    margin: 20px 5px;
+    font-size: 18px;
+}
+.menu_list .link, .mobile_auth .link{
+    color: #0052FF;
+}
+.mobile_auth{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.btn1 .link{
+    color: #0052FF;
+}
+.m-li{
+    padding: 5px 15px;
+    border: none;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 100px;
+}

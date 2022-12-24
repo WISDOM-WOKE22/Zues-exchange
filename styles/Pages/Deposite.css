@@ -1,0 +1,37 @@
+.deposite{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 40px 20px 20px 20px;
+}
+/* .dpt-choice{
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+.dpt-choice{
+   margin-left: 200px;
+}
+.dpt-choice button{
+    height: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 0 10px;
+    font-size: 15px;
+    background-color: #FFF;
+    border: 1px solid #0052FF;
+    transition: all .2s ease-in-out;
+    color: #0052FF;
+}
+.dpt-choice button:hover{
+    color: #fff;
+    background-color: #0052FF;
+}
+@media screen and (max-width:1400px) {
+    .dpt-choice{
+        margin-left: 0;
+    }
+}
