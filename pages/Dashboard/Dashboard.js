@@ -1,11 +1,10 @@
-import { useState, useEffect, useRef } from 'react'
-import { FaArrowAltCircleUp, FaDollarSign, FaWallet, FaWarehouse, FaUser } from 'react-icons/fa'
+import { useState, useEffect} from 'react'
+import { FaArrowAltCircleUp, FaWallet, FaWarehouse, FaUser } from 'react-icons/fa'
 import './Dashboard.css'
 import { Link } from 'react-router-dom'
 import Transaction from '../Transaction/Transaction'
 import Assets from '../UI/Assets/Assets'
 import { useAuthContext } from '../../Hooks/useAuthContext'
-import { useCollection } from '../../Hooks/UseCollection'
 import axios from 'axios'
 import useBalance from '../../Hooks/useBalance'
 import { useThemeContext } from '../../Hooks/useThemeContext'
@@ -42,16 +41,7 @@ export default function Dashboard() {
   const [ data, setData ] = useState('')
   const { mainBalance } = useBalance()
   const { user } =  useAuthContext()
-  const { color, background } = useThemeContext()
-  const { documents } = useCollection(
-    'Transactions',
-    ['uid',"==",user.uid]
-  )
-  const navLinkStyles = ({ isActive }) => {
-    return {
-      color: isActive ? color:'black'
-    }
-  }
+  const { color } = useThemeContext()
   useEffect(() => {
     axios
       .get(
@@ -70,12 +60,6 @@ export default function Dashboard() {
     Btc = bitcoin[0]
     btc = Btc.current_price
   }
-    //  let balance = '0.000'
-  // if((documents !== [] ) && (documents !== null) ){
-  //      balance = documents.map( transaction => +(transaction.amount))
-  //     .reduce((acc, amount) => ((acc += amount)))
-  // }
-
   return (
   <AnimatePresence>  
   <motion.div className="page DB"
@@ -111,14 +95,14 @@ export default function Dashboard() {
                 <div className='db-options'>
                   <div className='db-opt-con'>
                     <Link to='/Deposite' >
-                      <button className='db-btn' style={{ color:color, borderColor: color }}>Deposite</button>
+                      <button className='db-btn' style={{ color:color, borderColor: color }}>Deposit</button>
                     </Link>
                     <Link to='/withdraw'>
                        <button className='db-btn' style={{ color, borderColor: color }}>Withdraw</button>
                     </Link>
-                    <Link to='/buy_crypto'>
+                    {/* <Link to='/buy_crypto'>
                       <button className='db-btn' style={{ color, borderColor: color }}>Buy Crypto</button>
-                    </Link>
+                    </Link> */}
                   </div>
                 </div>
               </div>
@@ -152,12 +136,12 @@ export default function Dashboard() {
               } }}
             >
               <div className='services-box'>
-                <Link to='/buy_crypto' className='link bx'>
+                {/* <Link to='/buy_crypto' className='link bx'>
                   <div className='srvs'  style={{  borderColor: color, color }}>
                     <FaDollarSign/>
                     <div>Buy <br/> Crypto</div>
                   </div>
-                </Link>
+                </Link> */}
                 <Link to='/Withdraw' className='link bx'>  
                   <div className='srvs' style={{  borderColor: color, color }}>
                     <FaArrowAltCircleUp/>
@@ -167,7 +151,7 @@ export default function Dashboard() {
                 <Link to='/Deposite' className='link bx'>
                   <div className='srvs' style={{  borderColor: color, color }}>
                     <FaWarehouse/>
-                    <div>Deposite</div>
+                    <div>Deposit</div>
                   </div>
                 </Link>
                 <Link to='/earn' className='bx' style={{  borderColor: color, color }}>
@@ -199,3 +183,4 @@ export default function Dashboard() {
        </AnimatePresence>
   )
 }
+
