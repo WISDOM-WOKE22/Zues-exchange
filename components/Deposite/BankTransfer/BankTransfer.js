@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useFireStore } from "../../../Hooks/useFirestore";
+import { useNavigate } from "react-router-dom";
 import './BankTransfer.css'
 import { FaClone } from "react-icons/fa";
 
@@ -8,6 +9,7 @@ export default function BankTransfer({uid}) {
     const [ amountError, setAmountError ] = useState('')
     const { addDocument } = useFireStore('Transactions') 
     const accountnumber = '758473483489'
+    const navigate = useNavigate
 
     const date = new Date();
     let day = date.getDate();
@@ -26,6 +28,7 @@ export default function BankTransfer({uid}) {
             type:'Deposite'
         })
         setAmount('')
+        navigate('/')
     }
     return(
         <div className="bank-transfer-container">
@@ -34,7 +37,8 @@ export default function BankTransfer({uid}) {
                     <span>Amount</span>
                     <input
                      type='number'
-                     onChange={(e) => setAmount(e.target.value) }
+                     onChange={(e) => setAmount((e.target.value).slice(0,6)) }
+                     value={amount.slice(0,6)}
                     />
                     {amountError && <div className="error">{amountError}</div>}
                 </label>
