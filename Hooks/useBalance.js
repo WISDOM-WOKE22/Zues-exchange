@@ -60,44 +60,49 @@ export default function useBalance() {
     let dtron
     let wtron
 
+    let Documents
+
+    if(Array.isArray(documents) && documents.length !== 0){
+      Documents = documents.filter((transaction) => transaction.status === "Approved")
+    }
 
 
-    if(Array.isArray(documents) == true && documents.length !== 0  ){
-      balance = documents.map( transaction => +(transaction.amount))
+    if(Array.isArray(Documents) === true && Documents.length !== 0  ){
+      balance = Documents.map( transaction => +(transaction.amount))
       .reduce((acc, amount) => ((acc += amount)))
     }
-      if(Array.isArray(documents) == true && documents.length !== 0 ){
-         Withdraw = documents.filter((transaction) => transaction.type == 'withdraw')
+      if(Array.isArray(Documents) === true && Documents.length !== 0 ){
+         Withdraw = Documents.filter((transaction) => transaction.type === 'withdraw')
          if(Withdraw.length !== 0){
-           TotalWithdrawal = documents.filter((transaction) => transaction.type == 'withdraw')
+           TotalWithdrawal = Documents.filter((transaction) => transaction.type === 'withdraw')
            .map(transaction => +(transaction.amount))
            .reduce((acct, amount) => ((acct += amount)))
          }
-         if(Withdraw.length == 0 ){
+         if(Withdraw.length === 0 ){
           TotalWithdrawal = 0
          }
       }
-      if(Array.isArray(documents) == true && documents.length !== 0 ){
-         Deposite = documents.filter((transaction) => transaction.type == 'deposite')
+      if(Array.isArray(Documents) === true && Documents.length !== 0 ){
+         Deposite = Documents.filter((transaction) => transaction.type === 'deposite')
          if(Deposite.length !== 0){
-           TotalDeposite = documents.filter((transaction) => transaction.type == 'deposite')
+           TotalDeposite = Documents.filter((transaction) => transaction.type === 'deposite')
            .map(transaction => +(transaction.amount))
            .reduce((acct, amount) => ((acct += amount)))
          }
       }
-      if(Array.isArray(documents) == true && documents.length !== 0){
-          btc = documents.filter((transaction) => transaction.pair == "BTC" )
+      if(Array.isArray(Documents) === true && Documents.length !== 0){
+          btc = Documents.filter((transaction) => transaction.pair === "BTC" )
           if(btc.length !== 0){
-            bbitcoin = documents.filter((transaction) => transaction.pair == 'BTC')
-            .filter((transaction) => transaction.type == 'deposite')
+            bbitcoin = Documents.filter((transaction) => transaction.pair === 'BTC')
+            .filter((transaction) => transaction.type === 'deposite')
             if( bbitcoin.length !== 0 ){
               Dbitcoin = bbitcoin.map(transaction => +(transaction.amount))
               .reduce((acct, amount) => ((acct += amount)))
             }else{
               Dbitcoin = 0
             }
-            wbitcoin = documents.filter((transaction) => transaction.pair == 'BTC')
-            .filter((transaction) => transaction.type == 'withdraw')
+            wbitcoin = Documents.filter((transaction) => transaction.pair === 'BTC')
+            .filter((transaction) => transaction.type === 'withdraw')
             if( wbitcoin.length !== 0 ){
               Wbitcoin = wbitcoin.map(transaction => +(transaction.amount))
               .reduce((acct, amount) => ((acct += amount)))
@@ -107,19 +112,19 @@ export default function useBalance() {
           }
           Bitcoin = +(Dbitcoin) - (+Wbitcoin)
       }
-      if(Array.isArray(documents) == true && documents.length !== 0){
-          eth = documents.filter((transaction) => transaction.pair == "ETH" )
+      if(Array.isArray(Documents) === true && Documents.length !== 0){
+          eth = Documents.filter((transaction) => transaction.pair === "ETH" )
           if(eth.length !== 0){
-             dethereum = documents.filter((transaction) => transaction.pair == 'ETH')
-             .filter((transaction) => transaction.type == 'deposite')
+             dethereum = Documents.filter((transaction) => transaction.pair === 'ETH')
+             .filter((transaction) => transaction.type === 'deposite')
              if(dethereum.length !== 0){
               Dethereum = dethereum.map(transaction => +(transaction.amount))
               .reduce((acct, amount) => ((acct += amount)))
              } else{
               Dethereum = 0
              }
-             wethereum = documents.filter((transaction) => transaction.pair == 'ETH')
-             .filter((transaction) => transaction.type == 'withdraw')
+             wethereum = Documents.filter((transaction) => transaction.pair === 'ETH')
+             .filter((transaction) => transaction.type === 'withdraw')
              if(wethereum.length !== 0){
                Wethereum = wethereum.map(transaction => +(transaction.amount))
                .reduce((acct, amount) => ((acct += amount)))
@@ -129,17 +134,17 @@ export default function useBalance() {
           }
           Ethereum = +(Dethereum) - +(Wethereum)
       }
-      if(Array.isArray(documents) == true && documents.length !== 0){
-          bnb = documents.filter((transaction) => transaction.pair == "BNB" )
+      if(Array.isArray(Documents) === true && Documents.length !== 0){
+          bnb = Documents.filter((transaction) => transaction.pair === "BNB" )
           if(bnb.length !== 0){
-             dbinance = documents.filter((transaction) => transaction.pair == 'BNB')
-             .filter((transaction) => transaction.type == 'deposite')
+             dbinance = Documents.filter((transaction) => transaction.pair === 'BNB')
+             .filter((transaction) => transaction.type === 'deposite')
              if(dbinance.length !== 0) {
                Dbinance = dbinance.map(transaction => +(transaction.amount))
                .reduce((acct, amount) => ((acct += amount)))
              }
-             wbinance = documents.filter((transaction) => transaction.pair == 'BNB')
-             .filter((transaction) => transaction.type == 'withdraw')
+             wbinance = Documents.filter((transaction) => transaction.pair === 'BNB')
+             .filter((transaction) => transaction.type === 'withdraw')
              if(wbinance.length !== 0) {
                Wbinance = wbinance.map(transaction => +(transaction.amount))
                .reduce((acct, amount) => ((acct += amount)))
@@ -149,17 +154,17 @@ export default function useBalance() {
           }
           Binance = +(Dbinance) - +(Wbinance)
       }
-      if(Array.isArray(documents) == true && documents.length !== 0){
-          usdt = documents.filter((transaction) => transaction.pair == "USDT" )
+      if(Array.isArray(Documents) === true && Documents.length !== 0){
+          usdt = Documents.filter((transaction) => transaction.pair === "USDT" )
           if(usdt.length !== 0){
-             dusdt = documents.filter((transaction) => transaction.pair == 'USDT')
-             .filter((transaction) => transaction.type == 'deposite')
+             dusdt = Documents.filter((transaction) => transaction.pair === 'USDT')
+             .filter((transaction) => transaction.type === 'deposite')
              if(dusdt.length !== 0){
               Dusdt = dusdt.map(transaction => +(transaction.amount))
               .reduce((acct, amount) => ((acct += amount)))
              }
-             wusdt = documents.filter((transaction) => transaction.pair == 'USDT')
-             .filter((transaction) => transaction.type == 'withdraw')
+             wusdt = Documents.filter((transaction) => transaction.pair === 'USDT')
+             .filter((transaction) => transaction.type === 'withdraw')
              if(wusdt.length !== 0){
               Wusdt = wusdt.map(transaction => +(transaction.amount))
               .reduce((acct, amount) => ((acct += amount)))
@@ -169,17 +174,17 @@ export default function useBalance() {
           }
           Usdt = +(Dusdt) - +(Wusdt)
       }
-      if(Array.isArray(documents) == true && documents.length !== 0){
-          shib = documents.filter((transaction) => transaction.pair == "Shib" )
+      if(Array.isArray(Documents) === true && Documents.length !== 0){
+          shib = Documents.filter((transaction) => transaction.pair === "Shib" )
           if(shib.length !== 0){
-             dshib = documents.filter((transaction) => transaction.pair == 'Shib')
-             .filter((transaction) => transaction.type == 'deposite')
+             dshib = Documents.filter((transaction) => transaction.pair === 'Shib')
+             .filter((transaction) => transaction.type === 'deposite')
              if(dshib.length !== 0){
               Dshib = dshib.map(transaction => +(transaction.amount))
               .reduce((acct, amount) => ((acct += amount)))
              }
-             wshib = documents.filter((transaction) => transaction.pair == 'Shib')
-             .filter((transaction) => transaction.type == 'withdraw')
+             wshib = Documents.filter((transaction) => transaction.pair === 'Shib')
+             .filter((transaction) => transaction.type === 'withdraw')
              if(wshib.length !== 0){
               Wshib = wshib.map(transaction => +(transaction.amount))
               .reduce((acct, amount) => ((acct += amount)))
@@ -189,17 +194,17 @@ export default function useBalance() {
           }
           Shiba = +(Dshib) - +(Wshib)
       }
-      if(Array.isArray(documents) == true && documents.length !== 0){
-          trx = documents.filter((transaction) => transaction.pair == "Trx" )
+      if(Array.isArray(Documents) === true && Documents.length !== 0){
+          trx = Documents.filter((transaction) => transaction.pair === "Trx" )
           if(trx.length !== 0){
-             dtron = documents.filter((transaction) => transaction.pair == 'Trx')
-             .filter((transaction) => transaction.type == 'deposite')
+             dtron = Documents.filter((transaction) => transaction.pair === 'Trx')
+             .filter((transaction) => transaction.type === 'deposite')
              if(dtron.length !== 0){
               Dtron = dtron.map(transaction => +(transaction.amount))
               .reduce((acct, amount) => ((acct += amount)))
              }
-             wtron = documents.filter((transaction) => transaction.pair == 'Trx')
-             .filter((transaction) => transaction.type == 'withdraw')
+             wtron = Documents.filter((transaction) => transaction.pair === 'Trx')
+             .filter((transaction) => transaction.type === 'withdraw')
              if(wtron.length !== 0){
               Wtron = wtron.map(transaction => +(transaction.amount))
               .reduce((acct, amount) => ((acct += amount)))
@@ -209,13 +214,13 @@ export default function useBalance() {
           }
           Tron = +(Dtron) - (Wtron)
       }
-      if(Array.isArray(documents) == true && documents.length !== 0 ){
-          TotalPending = documents.filter((transaction) => transaction.status == 'Pending')
-          .map(transaction => +(transaction.amount))
-          .reduce((acct, amount) => ((acct += amount)))
-      }
+      // if(Array.isArray(Documents) === true && Documents.length !== 0 ){
+      //     TotalPending = Documents.filter((transaction) => transaction.status === 'Pending')
+      //     .map(transaction => +(transaction.amount))
+      //     .reduce((acct, amount) => ((acct += amount)))
+      // }
     useEffect(() => {
-          if(Array.isArray(documents) == true && documents.length !== 0){
+          if(Array.isArray(Documents) === true && Documents.length !== 0){
             const amount = balance - +TotalWithdrawal - +TotalWithdrawal
             setMainBalance(amount)
         }
