@@ -114,3 +114,8 @@
        left: -4px;
     }
 }
+@media screen and (max-width:350px) {
+    .coin-mn{
+        overflow-x: auto;
+    }
+}
