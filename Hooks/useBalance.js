@@ -12,9 +12,9 @@ export default function useBalance() {
     )
      const document = useRef(documents).current
     let balance 
-    let TotalWithdrawal 
-    let TotalDeposite 
-    let TotalPending 
+    let TotalWithdrawal = '0'
+    let TotalDeposite = '0'
+    let TotalPending = '0'
     let Withdraw 
     let Deposite
     let Bitcoin = '0'
@@ -214,11 +214,13 @@ export default function useBalance() {
           }
           Tron = +(Dtron) - (Wtron)
       }
-      // if(Array.isArray(Documents) === true && Documents.length !== 0 ){
-      //     TotalPending = Documents.filter((transaction) => transaction.status === 'Pending')
-      //     .map(transaction => +(transaction.amount))
-      //     .reduce((acct, amount) => ((acct += amount)))
-      // }
+      if(Array.isArray(documents) === true && documents.length !== 0 ){
+          TotalPending = documents.filter((transaction) => transaction.status === 'Pending')
+          if(TotalPending.length !== 0) {
+            TotalPending = TotalPending.map(transaction => +(transaction.amount))
+            .reduce((acct, amount) => ((acct += amount)))
+          }
+      }
     useEffect(() => {
           if(Array.isArray(Documents) === true && Documents.length !== 0){
             const amount = balance - +TotalWithdrawal - +TotalWithdrawal
