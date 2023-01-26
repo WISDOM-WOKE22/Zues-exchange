@@ -1,26 +1,19 @@
 import './Wallet.css'
 import Assets from '../UI/Assets/Assets'
+import DoughnutChart from '../../components/Chart/DoughnutChart'
 import { FaAngleDoubleRight, FaBitcoin, FaHeart, FaClock, FaUser } from 'react-icons/fa'
 import Transaction from '../Transaction/Transaction'
 import useBalance from '../../Hooks/useBalance'
 import axios from 'axios'
-import { useState, useEffect, useRef } from 'react'
-import { useAuthContext } from '../../Hooks/useAuthContext'
-import { useCollection } from '../../Hooks/UseCollection'
+import { useState, useEffect } from 'react'
 import { useThemeContext } from '../../Hooks/useThemeContext'
 import { Link } from 'react-router-dom'
-import AssetAllocation from '../../components/AssetAllocation/AssetAllocation'
 import { motion } from 'framer-motion'
 
 export default function Wallet() {
     const [ data, setData ] = useState('')
-    const { user } =  useAuthContext()
     const { mainBalance } = useBalance()
     const { color } = useThemeContext()
-    const { documents } = useCollection(
-      'Transactions',
-      ['uid',"==",user.uid]
-    )
        
 
     useEffect(() => {
@@ -91,6 +84,9 @@ export default function Wallet() {
                     </div>
                   </div>
                 </motion.div>
+                <div className='Echarts-container'>
+                  <DoughnutChart/>
+                </div>
                 <motion.div className='Assets-con' 
                  initial={{ x:'-100vw' }}
                  animate={{ 
@@ -104,7 +100,6 @@ export default function Wallet() {
                   <Assets/>
                 </motion.div>
                 <div>
-                  {/* <AssetAllocation/> */}
                 </div>
             </div>
             <motion.div className='transaction-com'
