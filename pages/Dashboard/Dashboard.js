@@ -109,6 +109,15 @@ export default function Dashboard() {
           </div>
           
         </div>
+        <motion.div 
+           initial={{ opacity:0 }}
+           animate={{ opacity:1, transition:{
+             duration:1,
+             delay: 0.5
+           } }}
+         className='dashboard-name'
+         >Hello <span style={{ color }}> {user.displayName}</span>
+         </motion.div>
           <div className='db-body'>
             <div className='dbf1'>
               <motion.div className='user-acct db-item' 
