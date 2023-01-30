@@ -27,26 +27,51 @@ export default function WithdrawalSettings({user}) {
     const { color } = useThemeContext()
     const [ showBankForm, setShowBankForm ] = useState(false)
     const [ bankName, setBankName ] = useState('')
+    const [ bankNameError, setBankNameError ] = useState('')
     const [ acctName, setAcctName ] = useState('')
+    const [ acctNameError, setAcctNameError ] = useState('')
     const [ acctNumber, setAcctNumber ] = useState('')
+    const [ acctNumberError, setAcctNumberError ] = useState('')
     const [ bankSwiftCode, setBankSwiftCode ] = useState('')
+    const [ bankSwiftCodeError, setBankSwiftCodeError ] = useState('')
     const [ walletAdress, setWalletAdress ] = useState('')
-    const { documents } = useCollection('Bank-Account')
     const { addDocument } = useFireStore('Bank-Account')
     const uid = user.uid
+    const { documents } = useCollection(
+        'Bank-Account',
+        ["uid","==", uid]
+        )
 
     const SaveBankAcct = () => {
-        addDocument({
-           bankName,
-           acctName,
-           acctNumber,
-           bankSwiftCode,
-           uid
-        })
+        setAcctNameError('')
+        setAcctNumberError('')
+        setBankNameError('')
+        setBankSwiftCodeError('')
+        if(!bankName){
+            setBankNameError('No bank name specified')
+        }
+        if(!acctName){
+            setAcctNameError('No account number specified')
+        }
+        if(!acctNumber){
+            setAcctNumberError('No account number specified')
+        }
+        if(!bankSwiftCode){
+            setBankSwiftCodeError('No bank swift code specified')
+        }
+        if(bankName && acctName && acctNumber && bankSwiftCode){
+            addDocument({
+               bankName,
+               acctName,
+               acctNumber,
+               bankSwiftCode,
+               uid
+            })
         setAcctName('')
         setAcctNumber('')
         setBankName('')
         setBankSwiftCode('')
+        }
     } 
     const deleteItem = (id) => {
         projectFirestore.collection('Bank-Account').doc(id).delete()
@@ -76,6 +101,7 @@ export default function WithdrawalSettings({user}) {
                  onChange={(e) => setBankName(e.target.value)}
                  value={bankName}
                  />
+                {bankNameError && <div className='error'>{bankNameError}</div>}
             </label>
             <label className='form-inpt2'>
                 <span>Account Name</span>
@@ -84,6 +110,7 @@ export default function WithdrawalSettings({user}) {
                  onChange={(e) => setAcctName(e.target.value)}
                  value={acctName}
                  />
+                {acctNameError && <div className='error'>{acctNameError}</div>}
             </label>
             <label>
                 <span>Account Number</span>
@@ -92,6 +119,7 @@ export default function WithdrawalSettings({user}) {
                  onChange={(e) => setAcctNumber(e.target.value)}
                  value={acctNumber}
                  />
+                {acctNumberError && <div className='error'>{acctNumberError}</div>}
             </label>
             <label className='form-inpt2'>
                 <span>Bank Swift Code</span>
@@ -100,6 +128,7 @@ export default function WithdrawalSettings({user}) {
                  onChange={(e) => setBankSwiftCode(e.target.value)}
                  value={bankSwiftCode}
                  />
+                {bankSwiftCodeError && <div className='error'>{bankSwiftCodeError}</div>} 
             </label>
         </form>
         <div>
