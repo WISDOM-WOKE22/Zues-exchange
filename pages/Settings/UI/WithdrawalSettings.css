@@ -66,3 +66,8 @@
         width: 105%;
     }
 }
+@media screen and (max-width:370px){
+    .withdrawal-box label input{
+        width: 100%;
+    }
+}
